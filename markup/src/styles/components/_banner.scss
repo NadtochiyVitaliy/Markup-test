@@ -1,0 +1,62 @@
+.banner-section {
+  position: relative;
+  z-index: 2;
+
+  @include media('>=desktop') {
+    margin-top: -128px;
+  }
+}
+
+.banner-wrap {
+  padding: 35px 18px 45px;
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
+  background: $purple-light;
+
+  @include media('>=desktop') {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 54px 87px 53px 71px;
+  }
+
+  .text-content {
+    text-align: center;
+    color: $gray;
+    font-size: 18px;
+    line-height: 1.55;
+    margin-bottom: 37px;
+
+    @include media('>=desktop') {
+      text-align: left;
+      margin-right: 20px;
+      font-size: inherit;
+      line-height: inherit;
+      margin: 0;
+    }
+
+    h3 {
+      color: $white;
+      margin: 0 0 27px;
+
+      @include media('>=desktop') {
+        margin: 0 0 11px;
+      }
+    }
+
+    p {
+    }
+  }
+
+  .btn {
+    min-width: 200px;
+    display: block;
+
+    @include media('>=desktop') {
+      display: inline-block;
+    }
+    &:last-child {
+      margin: 0;
+    }
+  }
+}

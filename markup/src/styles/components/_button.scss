@@ -1,0 +1,44 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+
+@each $palette-color-name, $color in $color-palette-buttons {
+  .btn {
+    &.btn-#{$palette-color-name} {
+      background: $color;
+      color: $white;
+      border-color: $color;
+
+      &:hover {
+        background: darken($color, 20%);
+        border-color: darken($color, 20%);
+      }
+    }
+  }
+}
+
+.btn {
+  display: inline-block;
+  vertical-align: top;
+  font-family: $font-family-sans-serif-secondary;
+  font-size: 18px;
+  line-height: 1;
+  font-weight: $font-weight-bold;
+  text-align: center;
+  text-decoration: none;
+  border-radius: $border-radius-sm;
+  padding: 21px 38px;
+  margin: 0 0 12px;
+  position: relative;
+  transition: all 0.2s;
+
+  &.btn-link {
+    background: transparent;
+    color: $white;
+    padding: 0;
+  }
+
+  &.btn-primary {
+    color: $blue-dark;
+  }
+}

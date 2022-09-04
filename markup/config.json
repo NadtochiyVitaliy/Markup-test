@@ -1,0 +1,46 @@
+{
+  "src": "src",
+  "dest": "dist",
+  "debug": false,
+  "cache_boost": false,
+  "minimize": true,
+  "linters": false,
+  "svgSprite": false,
+  "webp": false,
+  "server": {
+    "open": true,
+    "index": "__routes.html"
+  },
+  "styles": {
+    "bundle": "style",
+    "src": "styles",
+    "dest": "./",
+    "extension": "scss"
+  },
+  "scripts": {
+    "bundle": "app",
+    "src": "js",
+    "dest": "js",
+    "extension": "js"
+  },
+  "templates": {
+    "src": "views",
+    "dest": "./",
+    "extension": "html"
+  },
+  "static": {
+    "fonts": {
+      "src": "fonts"
+    },
+    "js": {
+      "src": "js/jquery",
+      "dest": "js"
+    },
+    "images": {
+      "src": "images"
+    },
+    "inc": {
+      "src": "inc"
+    }
+  }
+}

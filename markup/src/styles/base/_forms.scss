@@ -1,0 +1,54 @@
+// stylelint-disable selector-no-qualifying-type, selector-max-compound-selectors
+
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the form elements of the site
+// -----------------------------------------------------------------------------
+
+input[type='text'],
+input[type='tel'],
+input[type='email'],
+input[type='search'],
+input[type='password'],
+input[type='number'],
+textarea,
+select {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  border: 1px solid $form-element-border-color;
+  border-radius: $border-radius;
+  background: $white;
+  padding: $form-element-padding;
+  font-size: $font-size-base; // 16px
+  line-height: $line-height-base; //28
+  font-weight: $font-weight-normal;
+  color: $black;
+
+  &:focus {
+    border-color: $form-element-border-color;
+    outline: none;
+  }
+
+  @include placeholder {
+    color: $gray;
+  }
+}
+
+textarea {
+  resize: none;
+  vertical-align: top;
+  min-height: 150px;
+}
+
+button,
+input[type='button'],
+input[type='reset'],
+input[type='file'],
+input[type='submit'] {
+  display: inline-block;
+  vertical-align: top;
+  cursor: pointer;
+  margin: 0;
+}

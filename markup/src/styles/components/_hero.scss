@@ -1,0 +1,86 @@
+.hero-section {
+  padding: 100px 0 0;
+  position: relative;
+
+  @include media('>=desktop') {
+    background: $secondary;
+    padding: 140px 0 150px;
+  }
+
+  &::after,
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    min-height: 600px;
+    background: $secondary;
+    z-index: 0;
+
+    @include media('>=desktop') {
+      left: auto;
+      width: 400px;
+      height: 500px;
+      background-image: url('../images/hero-bg-right.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center center;
+      min-height: auto;
+    }
+  }
+
+  &::after {
+    @include media('>=desktop') {
+      background-image: url('../images/hero-bg-left.png');
+      top: auto;
+      right: auto;
+      left: 0;
+      bottom: 0;
+      width: 500px;
+      height: 400px;
+    }
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-right: -20px;
+    margin-left: -20px;
+    width: calc(100% + 40px);
+
+    @include media('>=desktop') {
+      padding-top: 40px;
+    }
+  }
+}
+
+.text-content {
+  max-width: 605px;
+  margin: 0 auto 35px;
+  text-align: center;
+  color: $gray-lightest;
+  line-height: 1.6;
+  position: relative;
+  z-index: 1;
+  @include media('>=desktop') {
+    line-height: inherit;
+  }
+
+  h1 {
+    line-height: 1.32;
+    margin-bottom: 20px;
+    color: $white;
+
+    @include media('>=desktop') {
+      line-height: 1.2;
+    }
+  }
+
+  p {
+    &:last-child {
+      margin: 0;
+    }
+  }
+}

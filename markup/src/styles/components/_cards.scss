@@ -1,0 +1,149 @@
+.card {
+  flex: 0 0 100%;
+  max-width: 100%;
+  padding: 0 20px;
+  position: relative;
+  z-index: 2;
+
+  @include media('>=tablet') {
+    flex: 1 1 60%;
+    max-width: 60%;
+  }
+
+  @include media('>=desktop') {
+    flex: 1 1 33.333333%;
+    max-width: 33.333333%;
+  }
+
+  .card-body {
+    padding: 30px 17px 43px;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+    background: $white;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+
+    @include media('>=desktop') {
+      padding: 30px 50px 50px;
+      height: 100%;
+    }
+  }
+
+  .card-header {
+    text-align: center;
+    margin-bottom: 45px;
+    min-height: 272px;
+    display: flex;
+    flex-direction: column;
+    h2 {
+      color: $blue-dark;
+      margin: 0 0 8px;
+    }
+    .card-price {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 24px;
+      line-height: 1.16;
+
+      @include media('>=desktop') {
+        font-size: 20px;
+        line-height: 1.4;
+      }
+      // margin-bottom: 30px;
+      span {
+        &:not(.price-value) {
+          font-size: 16px;
+          line-height: 1.3;
+          margin: 0;
+        }
+      }
+      .price-value {
+        font-family: $font-family-sans-serif-secondary;
+        font-size: 55px;
+        line-height: 1;
+        display: inline-block;
+        vertical-align: top;
+        position: relative;
+        padding-right: 25px;
+        margin: 14px -25px 4px 0;
+
+        &::after {
+          content: '\20AC';
+          font-size: 25px;
+          line-height: 1;
+          position: absolute;
+          right: -3px;
+          top: 5px;
+        }
+        &.price-value-request::after {
+          display: none;
+        }
+      }
+    }
+    .btn {
+      display: block;
+      margin-top: auto;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .icon-list {
+    margin-bottom: 26px;
+  }
+
+  .btn-link {
+    margin: auto auto 0;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &.card-orange {
+    .price-value,
+    .price-value::after,
+    .icon-list li::before,
+    .btn-link {
+      color: $orange;
+    }
+  }
+  &.card-pink {
+    .price-value,
+    .price-value::after,
+    .icon-list li::before,
+    .btn-link {
+      color: $pink;
+    }
+  }
+  &.card-purple {
+    .price-value,
+    .price-value::after,
+    .icon-list li::before,
+    .btn-link {
+      color: $secondary;
+    }
+
+    .card-header .price-value {
+      font-size: 35px;
+
+      @include media('>=desktop') {
+        font-size: 40px;
+      }
+    }
+  }
+
+  &.card-center {
+    @include media('>=desktop') {
+      margin-top: -40px;
+    }
+    .card-body {
+      @include media('>=desktop') {
+        padding: 70px 50px 50px;
+      }
+    }
+  }
+}

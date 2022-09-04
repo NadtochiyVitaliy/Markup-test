@@ -1,0 +1,143 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+/// Breakpoints map
+/// @prop {String} keys - Keys are identifiers mapped to a given length
+/// @prop {Map} values - Values are actual breakpoints expressed in pixels
+
+$breakpoints: (
+  'xs-phone': 320px,
+  'phone': 520px,
+  'tablet': 768px,
+  'desktop': 1024px,
+  'laptop': 1440px,
+  'widescreen': 1920px,
+);
+
+// keywords
+$media-expressions: (
+  'screen': 'screen',
+  'print': 'print',
+  'handheld': 'handheld',
+  'landscape': '(orientation: landscape)',
+  'portrait': '(orientation: portrait)',
+  'retina2x': '(-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)',
+  'retina3x': '(-webkit-min-device-pixel-ratio: 2.5), (min-resolution: 240dpi)',
+);
+
+// Color system
+
+$white: #fff;
+$black: #000;
+$gray: #d4d4e7;
+$gray-dark: #282e34;
+$gray-light: rgba($gray-dark, 0.65);
+$gray-lightest: rgba($gray, 0.65);
+$gray-lightest-2: #c4c4c4;
+$blue-dark: #0f273f;
+$blue-light: #6bedd4;
+$orange: #ea9d13;
+$pink: #ea6ca0;
+$purple: #35359e;
+$purple-light: #5252e3;
+
+$primary: $blue-light;
+$secondary: $purple;
+
+$color-palette: (
+  'primary': $primary,
+  'secondary': $secondary,
+  'purple': $purple,
+  'dark': $blue-dark,
+  'white': $white,
+);
+
+$color-palette-buttons: (
+  'primary': $primary,
+  'secondary': $secondary,
+  'danger': $pink,
+  'warning': $orange,
+);
+// The yiq lightness value that determines when the lightness of color changes from "dark" to "light". Acceptable values are between 0 and 255.
+$yiq-contrasted-threshold: 150;
+
+// Customize the light and dark text colors for use in our YIQ color contrast function.
+$yiq-text-dark: $black;
+$yiq-text-light: $white;
+
+// body
+//
+// settings for the `<body>` element.
+$rem-base: 16px;
+
+$base-min-width: 320px;
+
+$body-bg: $white;
+$body-color: $gray-light;
+
+// container max width, used for .container element
+$gutter: 25px;
+$container-max-width: 1256px + $gutter * 2;
+
+// Typography
+//
+// Font, line-height, and color for body text, headings, and more.
+
+// stylelint-disable value-keyword-case
+$font-family-sans-serif: 'Nunito', Arial, 'Noto Sans', sans-serif;
+$font-family-sans-serif-secondary: 'Montserrat', 'Noto Sans', sans-serif;
+$font-family-base: $font-family-sans-serif;
+$base-font-path: '../fonts';
+
+$font-weight-thin: 100;
+$font-weight-ulight: 200;
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+$font-weight-heavy: 800;
+$font-weight-black: 900;
+
+// Headers
+$h1-font-size: 30px;
+$h2-font-size: 36px;
+$h3-font-size: 24px;
+
+$headings-font-family: $font-family-sans-serif-secondary;
+$headings-font-weight: 700;
+$headings-line-height: 1.33;
+
+// Paragraphs
+
+$paragraph-margin-bottom: 12px;
+
+$font-size-base: 16px;
+$line-height-base: 1.8; // 28px
+$font-size-lead: 24px;
+$line-height-lead: 1.16; // 18px
+$base-font-family: $font-family-base;
+
+$link-color: $primary;
+$link-decoration: none;
+$link-hover-color: rgba($primary, 0.8);
+$link-hover-decoration: none;
+
+// border radius
+$rounded-circle: 50%;
+$border-radius: 10px;
+$border-radius-sm: 5px;
+
+// box-shadow
+$box-shadow: 0px 10px 20px rgba($black, 0.1);
+
+// Forms
+$form-element-padding: 7px 10px;
+$form-element-background-color: $white;
+$form-element-border-color: $black;
+$placeholder-color: $black;
+
+// Base transition function
+$transition-duration-base: 0.35s;
+$transition-easing-base: cubic-bezier(0.3, 0.86, 0.36, 0.95);

@@ -1,0 +1,129 @@
+// -----------------------------------------------------------------------------
+// This file contains typography styles.
+// -----------------------------------------------------------------------------
+
+/*
+  Set up a decent box model on the root element
+*/
+
+html {
+  font-size: $rem-base;
+}
+
+/*
+  Basic typography style for copy text
+*/
+body {
+  color: $body-color;
+  background: $body-bg;
+  font: #{$font-size-base}/#{$line-height-base} $base-font-family;
+  min-width: $base-min-width;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  @include media('>=tablet') {
+    font: #{$font-size-base}/#{$line-height-base} $base-font-family;
+  }
+}
+
+// Typography
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6,
+.h {
+  font-family: $headings-font-family;
+  font-weight: $headings-font-weight;
+  line-height: $headings-line-height;
+  margin: 0 0 11px;
+  color: inherit;
+
+  @include media('>=desktop') {
+    margin: 0 0 8px;
+    line-height: $headings-line-height;
+  }
+}
+
+h1,
+.h1 {
+  font-size: $h1-font-size; // 34px
+
+  @include media('>=tablet') {
+    font-size: 54px;
+  }
+}
+
+h2,
+.h2 {
+  font-size: $h2-font-size; // 32px
+
+  @include media('>=tablet') {
+    font-size: 40px;
+  }
+}
+
+h3,
+.h3 {
+  font-size: $h3-font-size; //24px
+
+  @include media('>=tablet') {
+    font-size: 28px;
+  }
+}
+
+p {
+  margin: 0 0 10px;
+}
+
+.lead {
+  @include media('>=tablet') {
+    font-size: $font-size-lead;
+    line-height: $line-height-lead;
+  }
+}
+
+/*
+  Basic styles for links
+*/
+a {
+  @include transition(color background opacity);
+  color: $link-color;
+  text-decoration: none;
+  display: inline-block;
+  vertical-align: top;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: rgba($link-hover-color, 0.8);
+  }
+}
+
+.icon-list {
+  @extend %listreset;
+
+  li {
+    font-family: $font-family-base;
+    position: relative;
+    padding-left: 17px;
+    margin-bottom: 13px;
+
+    &::before {
+      font-family: $icomoon-font-family;
+      content: $icon-accept;
+      font-size: 11px;
+      position: absolute;
+      left: 0;
+      top: 2px;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+// // -----------------------------------------------------------------------------
+// // This file contains all styles related to the common layout of the site
+// // -----------------------------------------------------------------------------
+
+body {
+  overflow-x: hidden;
+}
+
+/* set styles for grid */
+.container {
+  width: 100%;
+  max-width: $container-max-width; // 1256px // gutters 50px/2
+  padding-right: $gutter;
+  padding-left: $gutter;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+#main{
+	padding-bottom: 50px;
+}
